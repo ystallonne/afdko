@@ -63,6 +63,8 @@ def compile_package(pkg_dir):
         cmd = ["sh", "buildalllinux.sh"]
     elif platform_system == "Darwin":
         cmd = ["sh", "buildall.sh"]
+    elif platform_system == "FreeBSD":
+        cmd = ["sh", "buildallfreebsd.sh"]
     else:
         # fallback to Linux
         print(f'afdko: Unknown OS: {platform_system}')
